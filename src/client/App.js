@@ -1,22 +1,33 @@
-import React, { Component } from 'react';
-import './app.css';
+import React from 'react';
+import Home from './components/Home';
 import ReactImage from './react.png';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-export default class App extends Component {
-  state = { username: null };
+import './stylesheets/app.css';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 
-  componentDidMount() {
-    fetch('/api/getUsername')
-      .then(res => res.json())
-      .then(user => this.setState({ username: user.username }));
-  }
-
+export default class App extends React.Component {
   render() {
-    const { username } = this.state;
     return (
-      <div>
-        {username ? <h1>{`Hello ${username}`}</h1> : <h1>Loading.. please wait!</h1>}
-        <img src={ReactImage} alt="react" />
+      <div className="app">
+        <header>
+          <Navbar variant="dark" fixed="top">
+            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+            <Nav className="mr-auto">
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#features">Features</Nav.Link>
+              <Nav.Link href="#pricing">Pricing</Nav.Link>
+            </Nav>
+          </Navbar>
+        </header>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </Router>
       </div>
     );
   }

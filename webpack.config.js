@@ -23,7 +23,7 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        test: /\.(png|woff|woff2|eot|ttf|svg|mp4)$/,
         loader: 'url-loader?limit=100000'
       }
     ]
@@ -32,10 +32,12 @@ module.exports = {
     extensions: ['*', '.js', '.jsx']
   },
   devServer: {
-    port: 3000,
+    port: '3002',
     open: true,
+    historyApiFallback: true,
+    contentBase: "./",
     proxy: {
-      '/api': 'http://localhost:8080'
+      '/api': 'http://localhost:3001'
     }
   },
   plugins: [
