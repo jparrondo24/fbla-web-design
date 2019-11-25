@@ -15,7 +15,7 @@ export default class Home extends React.Component {
 		  </video>
 		  <h1>The rest of the site</h1>
 	    </Container>
-	    <Container>
+	    <Container className="home-body">
 	      <h1>The rest of the site</h1>
 	    </Container>
 	  </div>

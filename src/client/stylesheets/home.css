@@ -3,5 +3,18 @@
 }
 
 #landing-video {
+  height: 100%;
   width: 100%;
+  overflow: hidden;
+  position: absolute;
+  object-fit: cover;
+}
+
+.home-body {
+  position: absolute;
+  top: 100%;
+}
+
+header .navbar {
+  background-color: rgba(84, 181, 255, 0);
 }
