@@ -1,6 +1,5 @@
 import React from 'react';
 import Home from './components/Home';
-import ReactImage from './react.png';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import './stylesheets/app.css';
@@ -12,7 +11,7 @@ export default class App extends React.Component {
     return (
       <div className="app">
         <header>
-          <Navbar variant="dark" fixed="top">
+          <Navbar fixed="top">
             <Navbar.Brand href="#home">Navbar</Navbar.Brand>
             <Nav className="mr-auto">
               <Nav.Link href="#home">Home</Nav.Link>

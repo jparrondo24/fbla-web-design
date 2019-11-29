@@ -5,9 +5,9 @@
 #landing-video {
   height: 100%;
   width: 100%;
-  overflow: hidden;
   position: absolute;
   object-fit: cover;
+  border-radius: 0.5px;
 }
 
 .home-body {
@@ -16,5 +16,5 @@
 }
 
 header .navbar {
-  background-color: rgba(84, 181, 255, 0);
+  background-color: rgba(255, 255, 255, 0.75);
 }

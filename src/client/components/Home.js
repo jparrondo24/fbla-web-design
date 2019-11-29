@@ -7,9 +7,9 @@ import '../stylesheets/home.css';
 export default class Home extends React.Component {
   render() {
     return (
-	  <div class="home">
+	  <div className="home">
 	  	<Container fluid={true}>
-	      <video id="landing-video" autoPlay={true}>
+	      <video id="landing-video" loop muted autoPlay={true} playsInline={true}>
 		    <source src={BlueSkyVideo} type="video/mp4" />
 			  Video not working
 		  </video>
