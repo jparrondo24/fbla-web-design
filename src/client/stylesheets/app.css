@@ -5,3 +5,7 @@ header nav {
 html, body {
   width: 100%;
 }
+
+h1, h2, h3, p, nav {
+  font-family: 'Quicksand', sans-serif;
+}

@@ -12,11 +12,11 @@ export default class App extends React.Component {
       <div className="app">
         <header>
           <Navbar fixed="top">
-            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+            <Navbar.Brand href="#home">Sky High Airlines</Navbar.Brand>
             <Nav className="mr-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
+              <Nav.Link href="#home">Flight Schedules</Nav.Link>
+              <Nav.Link href="#features">High Flyers</Nav.Link>
+              <Nav.Link href="#pricing">Careers</Nav.Link>
             </Nav>
           </Navbar>
         </header>
