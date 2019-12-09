@@ -2,10 +2,39 @@ header nav {
   background-color: #54b5ff;
 }
 
+header nav img {
+  filter: invert(100%);
+  max-width: 60px;
+}
+
 html, body {
   width: 100%;
 }
 
 h1, h2, h3, p, nav {
   font-family: 'Quicksand', sans-serif;
+}
+
+.home-footer, footer {
+  background-color: #315782;
+  padding: 2%;
+  color: white;
+  text-align: center;
+}
+
+.home-footer img, footer img {
+  max-width: 200px;
+}
+
+.home-footer hr, footer hr {
+  max-width: 250px;
+  border-top: 1px solid white;
+}
+
+.home-footer span, footer span {
+  font-size: 30px;
+}
+
+.home-footer span a, footer span a {
+  color: white;
 }

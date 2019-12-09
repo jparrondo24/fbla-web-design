@@ -2,6 +2,10 @@
   padding: 0;
 }
 
+.object-fit-polyfill {
+  position: absolute !important;
+}
+
 #landing-video {
   height: 100%;
   width: 100%;
@@ -28,6 +32,34 @@
 .home-body {
   position: absolute;
   top: 100%;
+  margin-top: 2.5%;
+}
+
+.home-body h1 {
+  background-color: #3B699E;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 10px;
+}
+
+.home-body p {
+  font-size: 20px;
+}
+
+.home-body button {
+  font-size: 20px;
+  border-radius: 0px;
+  background-color: #3B699E;
+  color: white;
+}
+
+.home-body .row div {
+  text-align: center;
+  margin-top: 4%;
+  margin-bottom: 4%;
 }
 
 header .navbar {
