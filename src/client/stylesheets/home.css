@@ -1,12 +1,12 @@
-.container-fluid {
+.home .container-fluid {
   padding: 0;
 }
 
-.object-fit-polyfill {
+.home .object-fit-polyfill {
   position: absolute !important;
 }
 
-#landing-video {
+.home #landing-video {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -14,28 +14,28 @@
   border-radius: 0.5px;
 }
 
-#landing-video-overlay {
+.home #landing-video-overlay {
   position: absolute;
   height: 100%;
   width: 100%;
   margin: 0 !important;
 }
 
-#landing-video-overlay h1, #landing-video-overlay h2 {
+.home #landing-video-overlay h1, .home #landing-video-overlay h2 {
   color: white;
 }
 
-#landing-video-overlay h1 {
+.home #landing-video-overlay h1 {
   font-size: 50px;
 }
 
-.home-body {
+.home .home-body {
   position: absolute;
   top: 100%;
   margin-top: 2.5%;
 }
 
-.home-body h1 {
+.home .home-body h1 {
   background-color: #3B699E;
   color: white;
   text-align: center;
@@ -62,8 +62,12 @@
   margin-bottom: 4%;
 }
 
-header .navbar {
+header nav {
   background-color: rgba(255, 255, 255, 0.75);
+}
+
+header .navbar img {
+  filter: invert(100%);
 }
 
 #landing-logo {

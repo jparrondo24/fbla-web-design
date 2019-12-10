@@ -112,7 +112,7 @@ export default class Home extends React.Component {
 							</a> &nbsp;
 							<a target="_blank" href="https://www.instagram.com/americanair/">
 								<FontAwesomeIcon icon={faInstagram} />
-							</a> &nbsp;&nbsp;
+							</a> &nbsp;
 							<a target="_blank" href="https://www.linkedin.com/company/american-airlines/">
 								<FontAwesomeIcon icon={faLinkedin} />
 							</a>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './components/Home';
+import HighFlyers from './components/HighFlyers';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import './stylesheets/app.css';
@@ -15,30 +16,39 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <header>
-          <Navbar collapseOnSelect expand="md" fixed="top">
-            <Navbar.Brand href="#home">
-              <Image 
-                alt="Sky High Airlines Logo"
-                src={PlaneLogo} 
-                className="d-inline-block"
-              /> &nbsp;
-              Sky High Airlines
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="mr-auto">
-                <Nav.Link href="#home">Flight Schedules</Nav.Link>
-                <Nav.Link href="#features">High Flyers</Nav.Link>
-                <Nav.Link href="#pricing">Careers</Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Navbar>
-        </header>
         <Router>
+          <header>
+            <Navbar collapseOnSelect expand="md" fixed="top">
+              <Link to="/">
+                <Navbar.Brand>
+                  <Image 
+                    alt="Sky High Airlines Logo"
+                    src={PlaneLogo} 
+                    className="d-inline-block"
+                  /> &nbsp;
+                  Sky High Airlines
+                </Navbar.Brand>
+              </Link>
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="mr-auto">
+                  <Link className="nav-link" to="/schedules">Flight Schedules</Link>
+                  <Link className="nav-link" to="/high-flyers">High Flyers</Link>
+                  <Link className="nav-link" to="/careers">Careers</Link>
+                </Nav>
+              </Navbar.Collapse>
+            </Navbar>
+          </header>
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/flight-schedules">
+            </Route>
+            <Route exact path="/high-flyers">
+              <HighFlyers />
+            </Route>
+            <Route exact path="/careers">
             </Route>
           </Switch>
         </Router>
@@ -59,7 +69,7 @@ export default class App extends React.Component {
             </a> &nbsp;
             <a target="_blank" href="https://www.instagram.com/americanair/">
               <FontAwesomeIcon icon={faInstagram} />
-            </a> &nbsp;&nbsp;
+            </a> &nbsp;
             <a target="_blank" href="https://www.linkedin.com/company/american-airlines/">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
