@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const os = require('os');
 const sslRedirect = require('heroku-ssl-redirect');
+const cors = require('cors');
+const history = require('connect-history-api-fallback');
 
 require('dotenv').config();
 

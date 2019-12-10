@@ -27,6 +27,8 @@
     "bootstrap": "^4.3.1",
     "clean-webpack-plugin": "^1.0.0",
     "concurrently": "^4.0.0",
+    "connect-history-api-fallback": "^1.6.0",
+    "cors": "^2.8.5",
     "css-loader": "^2.0.0",
     "dotenv": "^8.2.0",
     "eslint": "^5.0.0",
