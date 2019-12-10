@@ -8,7 +8,8 @@ module.exports = {
   entry: ['babel-polyfill', './src/client/index.js'],
   output: {
     path: path.join(__dirname, outputDirectory),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [{
@@ -45,6 +46,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       favicon: './public/favicon.ico'
+    }),
+    new webpack.DefinePlugin({
+      'process.env.MY_URL': JSON.stringify(process.env.MY_URL),
+      'process.env.PORT': JSON.stringify(process.env.PORT)
     })
   ]
 };

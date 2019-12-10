@@ -1,9 +1,20 @@
 const express = require('express');
-const os = require('os');
-
 const app = express();
+const os = require('os');
+const sslRedirect = require('heroku-ssl-redirect');
 
-app.use(express.static('dist'));
-app.get('/api/getUsername', (req, res) => res.send({ username: os.userInfo().username }));
+require('dotenv').config();
+
+if (process.env.NODE_ENV === "production") {
+  app.use(cors({
+    origin: '#',
+    optionsSuccessStatus: 200
+  }));
+  app.use(history({
+    verbose: true
+  }));
+}
+
+app.use(sslRedirect());
 
 app.listen(process.env.PORT || 8080, () => console.log(`Listening on port ${process.env.PORT || 8080}!`));
