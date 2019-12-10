@@ -18,5 +18,6 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use(sslRedirect());
+app.use(express.static('dist'));
 
 app.listen(process.env.PORT || 8080, () => console.log(`Listening on port ${process.env.PORT || 8080}!`));
