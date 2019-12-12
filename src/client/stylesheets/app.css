@@ -1,3 +1,7 @@
+not-loaded {
+  display: none !important;
+}
+
 header nav img {
   max-width: 60px;
 }

@@ -13,9 +13,22 @@ import { faFacebookF, faTwitter, faInstagram, faLinkedin} from '@fortawesome/fre
 import PlaneLogo from './plane-logo.png';
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      documentClassName: "not-loaded"
+    }
+  }
+  
+  componentWillMount() {
+    this.setState({
+      documentClassName: "loaded"
+    });
+  }
+
   render() {
     return (
-      <div className="app">
+      <div className={"app " + this.state.documentClassName}>
         <Router>
           <header>
             <Navbar collapseOnSelect expand="md" fixed="top">

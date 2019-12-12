@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
@@ -15,9 +17,22 @@ import PlaneLogo from '../plane-logo.png';
 import '../stylesheets/home.css';
 
 export default class Home extends React.Component {
-  render() {
+	constructor(props) {
+    super(props);
+    this.state = {
+      documentClassName: "not-loaded"
+    }
+  }
+  
+  componentWillMount() {
+    this.setState({
+      documentClassName: "loaded"
+    });
+	}
+
+	render() {
     return (
-			<div className="home">
+			<div className={"home " + this.state.documentClassName}>
 				<Container fluid>
 					<video
 						className="media"
@@ -62,7 +77,7 @@ export default class Home extends React.Component {
 							md={6}
 						>
 							<p>With a variety of flights ready for your time, location, and destination, you won't have any trouble booking a flight with us.</p>
-							<Button variant="light">Browse our Flight Schedules  <FontAwesomeIcon icon={faThList}/></Button>
+							<Link to="/flight-schedules"><Button variant="light">Browse our Flight Schedules  <FontAwesomeIcon icon={faThList}/></Button></Link>
 						</Col>
 					</Row>
 					<Row className="no-gutters">
@@ -77,7 +92,7 @@ export default class Home extends React.Component {
 							md={{span: 6, order: 1}}
 						>
 							<p>Our High Flyers loyalty program makes it our pleasure to keep you reaching for the skies with us.</p>
-							<Button variant="light">Discover High Flyers  <FontAwesomeIcon icon={faGlobeAmericas} /></Button>
+							<Link to="/high-flyers"><Button variant="light">Discover High Flyers  <FontAwesomeIcon icon={faGlobeAmericas} /></Button></Link>
 						</Col>
 					</Row>
 					<Row className="no-gutters">
@@ -92,7 +107,7 @@ export default class Home extends React.Component {
 							md={6}
 						>
 							<p>Interested in a career with us among the clouds? </p>
-							<Button variant="light">See our Oppurtunities  <FontAwesomeIcon icon={faUser} /></Button>
+							<Link to="/careers"><Button variant="light">See our Oppurtunities  <FontAwesomeIcon icon={faUser} /></Button></Link>
 						</Col>
 					</Row>
 					<div className="home-footer">
